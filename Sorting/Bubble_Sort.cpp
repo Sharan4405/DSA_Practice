@@ -23,3 +23,8 @@ int main() {
     }
     return 0;
 }
+
+
+//Recursive Bubble Sort
+// here we reduce the tie complexity for the best case , when the array is already sorted.
+//it takes of O(n) of time complexity in the best case.
