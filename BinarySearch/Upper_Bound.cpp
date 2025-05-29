@@ -3,8 +3,8 @@
 using namespace std;
 
 int upperBound(const vector<int> &arr, int x) {
-    size_t low = 0, high = arr.size();
-    size_t ans = arr.size();
+    int low = 0, high = arr.size();
+    int ans = arr.size();
 
     while (low < high) {
         size_t mid = low + (high - low) / 2;
@@ -15,7 +15,7 @@ int upperBound(const vector<int> &arr, int x) {
             low = mid + 1;
         }
     }
-    return static_cast<int>(ans);
+    return ans;
 }
 
 int main()
