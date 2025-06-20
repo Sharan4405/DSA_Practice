@@ -21,3 +21,20 @@ class ListNode{
   }
 };
 ListNode* head = NULL;
+void Delete(){
+  if(head==NULL){
+    return;
+  }
+  if(head->next == NULL) {
+    delete head;
+    head = NULL;
+    return;
+  }
+  ListNode* temp1 = head;
+  while(temp1->next!=NULL){
+    temp1 = temp1->next;
+  }
+  ListNode* temp2 = temp1->prev;
+  temp1->prev = temp2->next = NULL;
+  delete temp1;
+}
