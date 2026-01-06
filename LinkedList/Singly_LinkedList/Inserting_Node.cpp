@@ -35,10 +35,11 @@ void printList(Node* head) {
 
 int main() {
     vector<int> arr = {2, 3, 4, 5};
+    int n = arr.size();
 
     Node* head = NULL;
 
-    for (int i = 0; i < arr.size(); ++i) {
+    for (int i = 0; i < n; ++i) {
         head = insert(head, arr[i]);
     }
 

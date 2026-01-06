@@ -9,7 +9,7 @@ public:
     int ans = n;
 
     while (low <= high) {
-        int mid = (low + high) / 2;
+        int mid = low + (high - low) / 2;
         // maybe an answer
         if (arr[mid] >= x) {
             ans = mid;
