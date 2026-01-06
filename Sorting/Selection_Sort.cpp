@@ -18,12 +18,16 @@ void selectionSort(vector<int>& arr) {
 }
 int main(){
     vector<int> arr;
-    for(int i=0; i<arr.size();i++){
+    int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
+    arr.resize(n);
+    for(int i=0; i<n;i++){
         cin >> arr[i];
     }
     selectionSort(arr);
     cout << "Sorted array: \n";
-    for(int i=0; i<arr.size();i++){
+    for(int i=0; i<n;i++){
         cout << arr[i] << " ";
     }
     return 0;

@@ -12,19 +12,20 @@ class Solution {
 public:
     bool isPalindrome(ListNode* head) {
         ListNode* start = head;
-        int len = length(head)/2;
+        int len = length(head);
+        int halfLen = len / 2;
         ListNode* tail = head;
-        while(len>0){
+        while(halfLen > 0){
             tail = tail->next;
-            len--;
+            halfLen--;
         }
-        int len2 = length(head)/2;
         ListNode* end = Reverse(tail);        
-        while(len2>0){
+        int compareLen = len / 2;
+        while(compareLen > 0){
             if(start->val == end->val){
                 start = start->next;
                 end = end->next;
-                len2--;
+                compareLen--;
             }else{
                 return false;
             }
