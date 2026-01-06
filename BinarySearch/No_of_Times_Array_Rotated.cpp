@@ -7,7 +7,7 @@ int findKRotation(vector<int> &arr) {
     int ans = INT_MAX;
     int index = -1;
     while (low <= high) {
-        int mid = (low + high) / 2;
+        int mid = low + (high - low) / 2;
         //search space is already sorted then arr[low] will always be the minimum in that search space:
         if (arr[low] <= arr[high]) {
             if (arr[low] < ans) {

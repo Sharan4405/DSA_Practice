@@ -6,7 +6,7 @@ int findFloor(int arr[], int n, int x) {
 	int ans = -1;
 
 	while (low <= high) {
-		int mid = (low + high) / 2;
+		int mid = low + (high - low) / 2;
 		// maybe an answer
 		if (arr[mid] <= x) {
 			ans = arr[mid];
@@ -25,7 +25,7 @@ int findCeil(int arr[], int n, int x) {
 	int ans = -1;
 
 	while (low <= high) {
-		int mid = (low + high) / 2;
+		int mid = low + (high - low) / 2;
 		// maybe an answer
 		if (arr[mid] >= x) {
 			ans = arr[mid];
